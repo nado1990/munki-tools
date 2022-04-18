@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest &apos;DingTalk&apos; and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.splyt.autopkg.munki.DingTalk</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>DingTalk</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/alibaba</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>DingTalk (Chinese: 钉钉; pinyin: Dīngdīng) is an enterprise communication and collaboration platform developed by Alibaba Group</string>
+			<key>display_name</key>
+			<string>DingTalk Lite</string>
+			<key>category</key>
+			<string>Communication</string>
+			<key>developer</key>
+			<string>Alibaba</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.splyt.autopkg.download.DingTalk</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+				<key>version_comparison_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
