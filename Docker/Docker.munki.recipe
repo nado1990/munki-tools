@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Docker and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>RecipeRobot.munki.Docker</string>
+	<string>Munkitools.munki.Docker</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -21,7 +21,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Spice up your Dock a little.</string>
+			<string> </string>
 			<key>developer</key>
 			<string>Docker Inc</string>
 			<key>display_name</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>RecipeRobot.download.Docker</string>
+	<string>Munkitools.download.Docker</string>
 	<key>Process</key>
 	<array>
 		<dict>
